@@ -1,0 +1,140 @@
+@media print {
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: auto;
+    }
+
+    #hamburger {
+        display: none !important;
+    }
+
+    ul.meniu {
+        display: flex !important;
+        color: black;
+        flex-direction: column;
+        justify-content: center;
+        page-break-after: always;
+    }
+/* 
+    ul.meniu a {
+        text-align: start !important;
+        color: black;
+    }
+
+    ul.submeniu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.submeniu a {
+        text-align: start !important;
+        color: black;
+    } */
+
+
+    #banner {
+        margin-top: 90%;
+        display: flex;
+        justify-content: end;
+        
+    }
+
+    #banner p {
+        width: 50%;
+        border: 4px double rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #grid-pagina {
+        display: block;
+    }
+
+    #main {
+        display: block;
+    }
+
+    img{
+        display: none !important;
+    }
+
+    video{
+        display: none !important;
+    }
+
+    iframe{
+        display: none !important;
+    }
+
+    .taburi-iframe a{
+        display: none !important;
+    }
+
+    #grid-galerie {
+        display: none;
+    }
+
+    .link-top {
+        display: none !important;
+    }
+
+    #footer {
+        break-before: always;
+        display: flex;
+        justify-content: start;
+    }
+
+    #footer address {
+        text-align: start;
+    }
+
+    #copyright {
+        text-align: start;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #watermark {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    #watermark::after {
+        width: 60%;
+        line-height: 1em;
+        height: 2em;
+        overflow: hidden;
+        opacity: 0.3;
+        display: flex;
+        justify-content: center;
+        color: black;
+        content: "Cristea Mihnea";
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom: 3cm;
+    margin-top: 3cm;
+    counter-increment: page;
+
+}
+
+@page: left {
+
+    margin-left: 2cm;
+    margin-right: 1cm;
+}
+
+@page: right {
+
+    margin-left: 1cm;
+    margin-right: 2cm;
+}

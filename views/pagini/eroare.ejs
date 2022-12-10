@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Eroare</title>
+    <meta name="keywords" content="brutarie, panificatie, patiserie, cofetarie">
+    <meta name="description" content="De 15 ani de cand suntem pe piata romaneasca avem o permanenta preocupare pentru sanatatea clientilor nostri care ne-a determinat 
+    sa facem o selectie riguroasa a retetelor folosite si a oamenilor cu care lucram, respectand in acelasi timp si normele europene in domeniul alimentatiei">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="resurse/css/erori.css" type="text/css">
+    <%- include("../fragmente/head.ejs"); %>
+</head>
+
+<body>
+
+    <%- include("../fragmente/header.ejs"); %>
+
+        <main>
+            <div id="err-coloane">
+                <section>
+                    <h2>
+                        <%- locals.titlu %>
+                    </h2>
+                    <div id="err-imag">
+                        <img src="<%- locals.imagine %>" />
+                    </div>
+                    <p>
+                        <%- locals.text %>
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <div id="footer">
+        <%- include("../fragmente/footer.ejs"); %>
+        </div>
+
+</body>
+
+</html>

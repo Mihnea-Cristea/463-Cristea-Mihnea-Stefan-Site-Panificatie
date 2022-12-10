@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+:root {
+    --galben: #E8AF20;
+    --caramiziu: #DB7629;
+    --portocaliu: #F25922;
+    --rosu: #EB3C2A;
+    --maro: #8C5C14;
+  }
+
+body{
+    --margine-main:7%;
+    --background-pagina:var(--maro);
+    --culoare-text:black;
+    --main-background:var(--portocaliu);
+
+    background-color: var(--background-pagina);
+    color: var(--culoare-text);
+
+    margin-top: 2.5rem;
+}
+
+ul {
+    margin-left: 2rem;
+}
+
+body.dark{
+    --background-pagina:var(--maro);
+    --culoare-text: white;
+    --main-background:var(--portocaliu);
+}
+.c1{
+    background-color: var(--rosu);
+}
+
+#h1{
+    background-color: var(--caramiziu);
+}
+
+main{
+    background-color: var(--main-background);
+    margin-left:var(--margine-main);
+    margin-right:var(--margine-main);
+}
+
+header{
+    /* background-color: aqua; */
+}
+
+footer{
+    background-color: var(--background-pagina);
+    position: relative;
+}
+
+#evenimente {
+    grid-area: z-evenimente;
+}
+
+#grid-pagina{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "z-welcome    z-welcome    z-welcome z-welcome"
+                         "z-welcome    z-welcome    z-welcome z-welcome"
+                         "z-evenimente   z-orar    z-orar    z-anunturi"
+                         "z-detalii    z-detalii    z-detalii z-detalii"
+                         "z-detalii    z-detalii    z-detalii z-detalii"
+                         "z-intrebari  z-intrebari  z-produse z-retete"
+                         ;
+}
+
+#grid-pagina > *{
+    border: 2px solid black;
+    margin:0;
+    padding:0;
+}
+
+/* Grid areas */
+
+#welcome{
+    grid-area:z-welcome;
+}
+
+#detalii{
+    grid-area:z-detalii;
+}
+
+#produse{
+    grid-area:z-produse;
+}
+
+#orar{
+    grid-area:z-orar;
+}
+
+#retete {
+    grid-area: z-retete;
+}
+
+#anunturi{
+    grid-area: z-anunturi;
+}
+
+#index-intrebari{
+    grid-area: z-intrebari;
+}
+
+#useri-online{
+    grid-area:z-useri-online;  /* de modificat in grid */
+}
+
+#statistici{
+    grid-area:z-statistici;  /* de modificat in grid */
+}
+
+#date-server {
+    grid-area:z-date-server; /* de modificat in grid */
+}
+
+/* Orar */
+#tab-orar {
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+/* #container-orar {   Folosisem un container pentru tabel insa acesta era mai mare decat tab-ul in sine, iar la border-radius nu se mai taiau colturile tabelului, ci ale containerului
+    overflow: hidden;
+    border-radius: 10%;
+} */
+
+table, th, td {
+    border: 1px solid;
+    /* border-collapse: collapse; */
+    
+  }
+
+tr:nth-child(even) {
+    background-color: var(--rosu);
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--galben)
+  }
+
+tr:nth-child(even):hover {
+    background-color: var(--caramiziu);
+    transition: all .7s ease-in-out;
+  }
+
+tr:nth-child(odd):hover {
+    background-color: var(--caramiziu);
+    transition: all .7s ease-in-out;
+  } 
+
+td:hover {
+    background-color: var(--maro);
+    transition: all .7s ease-in-out;
+}
+
+/* Stilizare taburi iframe */
+
+.taburi-iframe{
+    display: flex;
+    justify-content: center;
+}
+
+.taburi-iframe a{
+    border-radius: 5px;
+    display: block;
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgba(99, 196, 222, 0.5);
+
+    margin: 0 .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .25rem;
+    box-shadow: 0px -3px 14px 4px rgba(99, 196, 222, 0.5);
+    transition: all .7s ease-in-out;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.taburi-iframe a:hover {
+    background-color: rgba(99, 196, 222, 0.5);
+}
+
+.link-top { 
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    right: 5px;
+    bottom: 5px;
+    z-index: 10000;
+    font-size: 50px;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+
+    background-color: var(--maro);
+    transition: all .7s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0,0,0,0.25);
+}
+
+.link-top:hover {
+    box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.75);
+    font-size: 100px;
+    color: black;
+}
+
+/* Stilizare captions video ( VTT-uri ) */
+::cue{
+    opacity: 80%;
+    background-image: linear-gradient( var( --rosu ), var( --galben ) );
+    background-clip: text;
+
+}
+
+/*  
+    Layout for mobile
+*/
+
+/* Mobile */
+@media screen and (max-width:700px){
+    #grid-pagina {
+        display: block;
+    }
+    #container-orar {
+        overflow-x:scroll;
+        width: 100%;
+    }
+    * {
+        font-size: 20px;
+    }
+}
+
+/* Medium */
+@media screen and (min-width: 700px){
+    * {
+        font-size: 18px;
+    }
+}
+
+/* Large */
+@media screen and (min-width: 1200px){
+    * {
+        font-size: 16px;
+    }
+}

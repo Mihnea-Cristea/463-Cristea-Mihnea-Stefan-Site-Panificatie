@@ -1,0 +1,54 @@
+#hamburger {
+    display: block;
+    height: var(--inaltime-meniu);
+}
+
+#hamburger img {
+    height: 100%;
+    width: auto;
+}
+
+ul.meniu {
+    display: none;
+    animation-name: animatie-meniu;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    
+}
+
+#ch-menu:checked~ul.meniu {
+    display: block;
+}
+
+ul.meniu li {
+    width: 100% !important;
+}
+
+@keyframes animatie-meniu {
+    0% {
+        clip-path: circle(0% at 0 0)
+    }
+
+    100% {
+        clip-path: circle(200% at 0 0)
+    }
+}
+
+ul.meniu {
+    margin-top: -10px;
+}
+
+nav {
+    width: 94%;
+}
+
+.meniu-categorie.undroppable:hover::after {
+    display: none;
+    background-color: lighten(black, 10%);
+}
+
+.meniu-categorie:nth-child(1) span {
+    display: none;
+}

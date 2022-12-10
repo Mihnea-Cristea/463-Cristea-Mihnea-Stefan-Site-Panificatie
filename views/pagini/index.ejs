@@ -1,0 +1,270 @@
+<!DOCTYPE html> 
+<html lang="ro">
+
+<head>
+    
+    <title>Voipan</title> <!-- Tag-uri meta (cerinta 2)-->
+    
+    <meta name="keywords" content="brutarie, panificatie, patiserie, cofetarie">
+    <meta name="description" 
+    content="De 15 ani de cand suntem pe piata romaneasca avem o permanenta preocupare pentru sanatatea clientilor nostri care ne-a determinat 
+    sa facem o selectie riguroasa a retetelor folosite si a oamenilor cu care lucram, respectand in acelasi timp si normele europene in domeniul alimentatiei">
+    <meta name="msapplication-TileColor" content="#C4A484">
+
+    <link rel="stylesheet" href="resurse/css/css-printare.css" type="text/css" />
+
+    <%- include("../fragmente/head.ejs") %>
+
+</head>
+
+<body>
+    
+    <!-- Link-top (cerinta 11) -->
+    <a href="#" class="link-top">🠹</a>
+
+    <!-- Including header fragment -->
+    <%- include("../fragmente/header.ejs") %>
+
+    <main>
+
+    <div id="banner">
+        <p>Banner: Acesta este un proiect scolar!</p>
+    </div>
+
+    <p> Ip: <%- locals.ip %> </p>
+
+    <p id="watermark"></p>
+
+    <div id="grid-pagina">
+
+        <section id="welcome"> <!-- Section tag (cerinta 6) -->
+            
+            <h2>Voipan - Cofetarie, Brutarie, Patiserie</h2>
+            
+            <p class="intro">Bine ati venit pe site-ul nostru!</p>
+            
+            <ul> <!-- Tag-uri in section (cerinta 7 - ul & p) -->
+                <li><a href="">Cofetarie</a></li>
+                <li><a href="">Patiserie</a></li>
+                <li><a href="">Panificatie</a></li>
+            </ul>
+          
+            <div id="dv-prezentare-1">
+                <div id="dv-prezentare">
+                    <figure style="width: 20%;"> <!-- Imagine cu descriere (cerinta 8) -->
+                        <picture>
+                            <source media="(max-width: 465px)" srcset="resurse/imagini/galerie/croissantMic.jpg">
+                            <source media="(max-width: 650px)" srcset="resurse/imagini/galerie/croissantMediu.jpg">
+                            <img src="resurse/imagini/galerie/croissant.jpg" alt="Croissant" style="width: 100%;">
+                        </picture>
+                        <figcaption> Croissantele noastre renumite</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        
+        <section id="retete">
+            <!-- Link extern + iframe-uri (cerinta 11) -->
+
+            <h2>Retete panificatie</h2>
+            <div class="taburi-iframe">
+            <a href="https://www.youtube.com/embed/jsrWs-S_g8g" target="ifr-video">Reteta paine</a>
+            <a href="https://www.youtube.com/embed/CrM9fRrqBv4" target="ifr-video">Reteta savarina</a>
+            <a href="https://www.youtube.com/embed/ZT3kr-c5IlY" target="ifr-video">Reteta cozonac</a>
+            </div>
+            <iframe style="width: 100%;"
+                name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/gQ8Nu3WX6ns"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <p>V-am pregatit in urmatoarele videoclipuri retetele noastre faimoase de paine si cozonac,
+                precum si un video bonus cu una dintre prajiturile noastre preferate</p>
+            <p>     
+                <b><dfn>Voipan</dfn></b>- De 15 ani de cand suntem pe piata romaneasca avem o permanenta preocupare pentru sanatatea clientilor nostri care ne-a determinat sa facem 
+                                        o selectie riguroasa a retetelor folosite si a oamenilor cu care lucram, respectand in acelasi timp si normele europene in domeniul alimentatiei.
+                <a href="https://www.listafirme.ro/voipan-sil-srl-6696018/"> Catre pagina noastra descriptiva</a>   
+            </p> 
+        </section>
+        <section id="produse">
+            <h2>Produsele noastre</h2>
+            <p>Vă oferim o multitudine de metode să câștigați cu succes kilograme în plus.</p>
+            <section>
+                <h3>Torturi</h3>
+                <p>În caz că nu le puteți mânca fiindcă sunteți la dietă și doar vă uitați la ele, puneți accentul pe u!</p>
+                <p>Avem torturi cu:</p>
+                <ul>
+                    <li>ciocolată</li>
+                    <li>frișcă</li>
+                    <li>fructe</li>
+                    <li>dulceață</li>
+                    <li>înghețată</li>
+                    <li>regrete</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="orar">
+            <h2>Orar</h2>
+            <div id="container-orar">
+                <table id="tab-orar"> <!--  overflow scroll pt bara orizontala de navigare la table -->
+                    <thead>
+                        <tr>
+                            <th>Cod</th>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Interval dimineata</th>
+                            <th>Pauza de masa</th>
+                            <th>Interval seară</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td>Luni</td>
+                            <td>10-12</td>
+                            <td>12-14</td>
+                            <td>14-20</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            
+                            <td>Marti</td>
+                            <td>9-12</td>
+                            <td>12-14</td>
+                            <td>14-21</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            
+                            <td>Miercuri</td>
+                            <td>9-11</td>
+                            <td>11-13</td>
+                            <td>14-21</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                    
+                            <td>Joi</td>
+                            <td>9-11</td>
+                            <td>11-13</td>
+                            <td>14-21</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            
+                            <td>Vineri</td>
+                            <td>9-12</td>
+                            <td>12-14</td>
+                            <td>14-19</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sambata</td>
+                            <td>10-12</td>
+                            <td>12-13</td>
+                            <td>13-16</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>Duminica</td>
+                            <td>10-14</td>
+                            <td>-</td>
+                            <td>inchis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="anunturi">
+            <h2>Anunțuri</h2> <p><time datetime="2022-01-05">5 ianuarie 2022</time> <strong>No more Covid!!!!</strong></p>
+           
+            <p><time datetime="2020-07-05">5 iulie 2020</time> Am adăugat o prăjitură noua în meniu</p>
+            <p><time datetime="2020-09-15">15 septembrie 2020</time> Am adăugat un fursec nou în meniu</p>
+            <p><time datetime="2020-12-20">20 decembrie 2020</time> Nu avem nimic de anunțat, dar ne era dor de voi.</p>
+            <p><time datetime="2020-12-28">28 decembrie 2020</time> Am adăugat o prăjitură noua în meniu</p>
+            <p><time datetime="2021-01-01">1 ianuarie 2021</time> Un an nou fericit!</p>
+            <p><time datetime="2021-02-11">11 februarie 2021</time> Studiile au arătat că prăjiturile sunt cele mai sănătoase alimente. 
+                E adevărat că doar studiile noastre, dar astea sunt detalii. </p>
+        </section>
+
+        <section id="index-intrebari">
+            <h2>Întrebări frecvente</h2>
+            <details><summary>Produsele dumneavoastră provoacă afecțiuni dentare?</summary>
+                <p>Da!</p>
+            </details>
+            <details><summary>Produsele dumneavoastră provoacă afecțiuni ale sistemului digestiv (precum diabetul)?</summary>
+                <p>Da!</p>
+            </details>
+            <details><summary>Produsele dumneavoastră provoacă obezitate?</summary>
+                <p>Foarte! Da!</p>
+            </details>
+            <details><summary>Sunteți cumva asociați cu medicii dentiști, medicii gastroenterologi, companiile farmaceutice și sălile de Fitness?</summary>
+                <p>Ne rezervăm dreptul de a nu răspunde la această întrebare; mulțumim pentru înțelegere!</p>
+            </details>
+        </section>
+        
+        <!-- Details & Summary (cerinta 12) -->
+        
+        <section id="detalii">
+            <details>
+                <summary>Panificatie</summary>
+
+                <p>Pentru a face paine buna este nevoie de grija, cunoastere si de o doza mare de pasiune si daruire. 
+                <b>Voipan</b> foloseste din plin aceste ingrediente pentru un produs atat de gustos si hranitor, care nu poate lipsi in nici o zi de pe masa.</p>
+            </details>
+
+            <details>
+                <summary>Patiserie</summary>
+                <!-- Cuvinte cheie + marcare (cerinta 9 & 10) -->
+                <p>                                     
+                Uneori imaginile spun totul, dar pana cand nu simti mirosul <i>cozonacilor</i> proaspat scosi din cuptor sau gustul delicios al <i>croissantelor</i> 
+                nu iti poti da seama de savoarea si dulceata produselor de <b>patiserie</b> fabricate de <b>Voipan</b>.
+                </p>
+                    
+                <!-- Download link (cerinta 11)-->    
+                <a href="resurse/imagini/galerie/croissant.jpg" download>
+                    <img src="resurse/imagini/galerie/croissant.jpg" alt="Croissant" width="100" height="100">
+                </a>
+                <p>Click pe croissant pentru a descarca imaginea</p>
+            </details>
+
+            <details>
+                <summary>Cofetarie</summary>
+                <p>
+                    <b><ins>Cofetaria Dolce</ins></b> si-a castigat credibilitatea in ceea ce priveste mentinerea calitatii produselor si imbunatatirea servicilor, produce si comercializeaza,
+                    <strong>prajituri si torturi</strong> facute dupa retete frantuzesti, ciocolata belgiana, frisca, pulpa si sucuri proaspete de fructe !
+                </p>
+            </details>
+        </section>
+
+        <section id="evenimente">
+            <p>Evenimente :)</p>
+            <video poster="resurse/videoclipuri/poza-poster.png" width="320" height="240" controls="controls" preload="metadata">
+                <source src="resurse/videoclipuri/videoclip-tort.mp4" type="video/mp4">
+                <source src="resurse/videoclipuri/videoclip-tort.ogv" type="video/ogv">
+                <track default src="resurse/videoclipuri/mesaje_ro.vtt" kind="captions" srclang="ro" label="romana" default/>
+                <track  src="resurse/videoclipuri/mesaje_en.vtt" kind="captions" srclang="en" label="engleza" />
+
+            </video>
+
+        </section>
+
+        
+    </div>
+    </main>
+                <!-- Link-top exemplu layout in drive -->
+    
+    <%- include("../fragmente/footer.ejs") %>
+
+</body>
+
+</html>

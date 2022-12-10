@@ -1,0 +1,40 @@
+{
+    "cale_baza": "resurse/imagini/erori",
+    "eroare_default":{
+        "titlu":"Eroare",
+        "text": "Nu puteti accesa aceasta pagina, va rugam reveniti la pagina principala!",
+        "imagine":"eroare.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404",
+            "text": "Eroare 404",
+            "imagine":"eroare-404.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403",
+            "text": "Eroare 403",
+            "imagine":"eroare-403.jpg"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Site în lucru",
+            "text": "Aceasta pagina inca nu este gata, va rugam sa reveniti mai tarziu! Multumim pentru intelegerea acordata!",
+            "imagine":"eroare.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Eroare baza date",
+            "text": "Produsul cautat nu este in baza noastra de date",
+            "imagine":"eroare.png"
+        }
+    ]
+}
