@@ -5,18 +5,18 @@
 }
 
 :root {
-    --galben: #E8AF20;
-    --caramiziu: #DB7629;
-    --portocaliu: #F25922;
-    --rosu: #EB3C2A;
-    --maro: #8C5C14;
+    --quartz: #EDD0C0;
+    --verde: #B3C0AE;
+    --portocaliu: #FEC47F;
+    --rosu: #C8626D;
+    --crem: #BC8880;
   }
 
 body{
-    --margine-main:7%;
-    --background-pagina:var(--maro);
+    --margine-main:1%;
+    --background-pagina:var(--verde);
     --culoare-text:black;
-    --main-background:var(--portocaliu);
+    --main-background:var(--quartz);
 
     background-color: var(--background-pagina);
     color: var(--culoare-text);
@@ -29,7 +29,7 @@ ul {
 }
 
 body.dark{
-    --background-pagina:var(--maro);
+    --background-pagina:var(--crem);
     --culoare-text: white;
     --main-background:var(--portocaliu);
 }
@@ -38,17 +38,13 @@ body.dark{
 }
 
 #h1{
-    background-color: var(--caramiziu);
+    background-color: var(--verde);
 }
 
 main{
     background-color: var(--main-background);
     margin-left:var(--margine-main);
     margin-right:var(--margine-main);
-}
-
-header{
-    /* background-color: aqua; */
 }
 
 footer{
@@ -120,45 +116,43 @@ footer{
     grid-area:z-date-server; /* de modificat in grid */
 }
 
-/* Orar */
+
+
+/* Tabel Orar */
+
 #tab-orar {
     overflow: hidden;
     border-radius: 10%;
 }
 
-/* #container-orar {   Folosisem un container pentru tabel insa acesta era mai mare decat tab-ul in sine, iar la border-radius nu se mai taiau colturile tabelului, ci ale containerului
-    overflow: hidden;
-    border-radius: 10%;
-} */
-
 table, th, td {
     border: 1px solid;
-    /* border-collapse: collapse; */
-    
   }
 
 tr:nth-child(even) {
-    background-color: var(--rosu);
+    background-color: var(--verde);
   }
 
   tr:nth-child(odd) {
-    background-color: var(--galben)
+    background-color: var(--rosu)
   }
 
 tr:nth-child(even):hover {
-    background-color: var(--caramiziu);
+    background-color: var(--crem);
     transition: all .7s ease-in-out;
   }
 
 tr:nth-child(odd):hover {
-    background-color: var(--caramiziu);
+    background-color: var(--crem);
     transition: all .7s ease-in-out;
   } 
 
 td:hover {
-    background-color: var(--maro);
+    background-color: var(--quartz);
     transition: all .7s ease-in-out;
 }
+
+
 
 /* Stilizare taburi iframe */
 
@@ -172,14 +166,14 @@ td:hover {
     display: block;
     width: 100px;
     height: 30px;
-    border: 1px solid rgba(99, 196, 222, 0.5);
+    border: 1px solid var(--verde);
 
     margin: 0 .25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 .25rem;
-    box-shadow: 0px -3px 14px 4px rgba(99, 196, 222, 0.5);
+    box-shadow: 0px -3px 14px 4px var(--verde);
     transition: all .7s ease-in-out;
     color: black;
     text-decoration: none;
@@ -187,23 +181,27 @@ td:hover {
 }
 
 .taburi-iframe a:hover {
-    background-color: rgba(99, 196, 222, 0.5);
+    background-color: var(--verde);
 }
+
+
+
+/* Link top button */
 
 .link-top { 
     position: fixed;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     right: 5px;
     bottom: 5px;
     z-index: 10000;
-    font-size: 50px;
+    font-size: 25px;
 
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
 
-    background-color: var(--maro);
+    background-color: var(--quartz);
     transition: all .7s ease-in-out;
 
     display: flex;
@@ -215,17 +213,52 @@ td:hover {
 
 .link-top:hover {
     box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.75);
-    font-size: 100px;
+    font-size: 50px;
     color: black;
 }
 
-/* Stilizare captions video ( VTT-uri ) */
+
+
+/* Cue for captions */
+
 ::cue{
     opacity: 80%;
-    background-image: linear-gradient( var( --rosu ), var( --galben ) );
+    background-image: linear-gradient( var( --rosu ), var( --quartz ) );
     background-clip: text;
 
 }
+
+
+
+
+/* Text reflections */
+
+#text-reflexie h2 {
+    display: block;
+    transform-origin: 0 0;
+    opacity: 0.7;
+    transform: rotateY(360deg) translate( 225px, -65px) rotate(25deg);  /* de mirror uit */
+
+}
+
+#text h2 {
+    transform: rotate( -25deg) translate(0px, 65px);
+    transform-origin: 0 0; 
+}
+
+#text h2, #text-reflexie h2 {
+    font-size: 300%;
+    font-weight: bold;
+    
+}
+
+
+#Titlu-Hover:hover {
+    color: var(--rosu);
+    
+    
+} 
+
 
 /*  
     Layout for mobile
@@ -246,7 +279,7 @@ td:hover {
 }
 
 /* Medium */
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) and (max-width:1200px){
     * {
         font-size: 18px;
     }

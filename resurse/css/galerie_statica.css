@@ -1,0 +1,97 @@
+#a-noua-zona {
+  padding-left: 1 em;
+  padding-right: 1 em;
+}
+
+#grid-galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+  counter-reset: nrimag 0; /* nrimag=3*/
+}
+#grid-galerie img {
+  width: 100%;
+}
+#grid-galerie figcaption::before {
+  content: counter(nrimag, upper-roman) ")";
+}
+#grid-galerie figcaption {
+  text-align: center;
+  counter-increment: nrimag 1; /* nrimag+=2*/
+}
+#grid-galerie > figure:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+#grid-galerie > figure:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+#grid-galerie > figure:nth-child(3) {
+  grid-area: 1/3/2/4;
+}
+#grid-galerie > figure:nth-child(4) {
+  grid-area: 2/1/3/2;
+}
+#grid-galerie > figure:nth-child(5) {
+  grid-area: 2/3/3/4;
+}
+#grid-galerie > figure:nth-child(6) {
+  grid-area: 3/1/4/2;
+}
+#grid-galerie > figure:nth-child(7) {
+  grid-area: 3/3/4/4;
+}
+#grid-galerie > figure:nth-child(8) {
+  grid-area: 4/1/5/2;
+}
+#grid-galerie > figure:nth-child(9) {
+  grid-area: 4/2/5/3;
+}
+#grid-galerie > figure:nth-child(10) {
+  grid-area: 4/3/5/4;
+}
+
+@media screen and (max-width: 700px){
+  #grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(2, fr);
+  }
+  #grid-galerie > figure:nth-child(1) {
+    grid-area: 1/1/2/2;
+  }
+  #grid-galerie > figure:nth-child(2) {
+    grid-area: 1/2/2/3;
+  }
+  #grid-galerie > figure:nth-child(3) {
+    grid-area: 2/1/3/2;
+  }
+  #grid-galerie > figure:nth-child(4) {
+    grid-area: 2/2/3/3;
+  }
+  #grid-galerie > figure:nth-child(5) {
+    grid-area: 3/1/4/2;
+  }
+  #grid-galerie > figure:nth-child(6) {
+    grid-area: 3/2/4/3;
+  }
+  #grid-galerie > figure:nth-child(7) {
+    grid-area: 4/1/5/2;
+  }
+  #grid-galerie > figure:nth-child(8) {
+    grid-area: 4/2/5/3;
+  }
+  #grid-galerie > figure:nth-child(9) {
+    grid-area: 5/1/6/2;
+  }
+  #grid-galerie > figure:nth-child(10) {
+    grid-area: 5/2/6/3;
+  }
+}
+@media screen and (max-width: 450px) {
+  #grid-galerie {
+    display: block;
+  }
+}
+/* sass ./resurse/scss/galerie_statica.scss resurse/css/galerie_statica.css */
+
+/*# sourceMappingURL=galerie_statica.css.map */

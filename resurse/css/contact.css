@@ -1,0 +1,38 @@
+/* Background video */
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.viewport-header {
+    display: block;
+    z-index: 9999;
+    position: relative;
+}
+
+.viewport-header #user-button {
+    color: white;
+}
+
+.viewport-produse {
+    background-color: white;
+    position: relative;
+    height: max-content;
+    padding: 1rem;
+    margin: 5%;
+}
+
+.viewport-footer {
+    margin-top: 5%;
+    display: block;
+    z-index: 9999;
+    position: relative;
+}
+
+.viewport-footer footer {
+    color: white;
+}

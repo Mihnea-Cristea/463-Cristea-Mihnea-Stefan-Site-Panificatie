@@ -1,37 +1,65 @@
 {
-    "cale_galerie":"resurse/imagini/galerie",
+    "cale_galerie": "resurse/imagini/galerie",
     "imagini": [
         {
-            "fisier":"briose-frisca.png",
-            "descriere":"Brioșe",
-            "luni":["martie","februarie","noiembriep"]
+            "cale_imagine": "poza1.png",
+            "titlu": "Tarte",
+            "descriere": "Tarte cu arome asortate",
+            "sfert_ora": "1"
         },
         {
-            "fisier":"clatite.png",
-            "descriere":"Clătite cu dulceață",
-            "luni":["ianuarie","februarie","iunie"]
-
+            "cale_imagine": "poza2.png",
+            "titlu": "Mini eclere",
+            "descriere": "Mini eclere cu ciocolata",
+            "sfert_ora": "1"
         },
         {
-            "fisier":"gogosi.png",
-            "descriere":"Gogoși glazurate",
-            "luni":["ianuarie","februarie","iunie","martie"]
+            "cale_imagine": "poza3.png",
+            "titlu": "Belcolade",
+            "descriere": "Prajitura specific campineana cu ciocolata si visine",
+            "sfert_ora": "2"
         },
         {
-            "fisier":"tort-scortisoara.png",
-            "descriere":"Tort cu scorțisoară"
+            "cale_imagine": "poza4.png",
+            "titlu": "Trufe",
+            "descriere": "Trufe cu ciocolata belgiana",
+            "sfert_ora": "2"
         },
         {
-            "fisier":"prajitura-ciocolata.png",
-            "descriere":"Prăjitură cu ciocolată"
+            "cale_imagine": "poza5.png",
+            "titlu": "Amaretto",
+            "descriere": "Prajitura in stil Ora 12 cu amaretto",
+            "sfert_ora": "3"
         },
         {
-            "fisier":"tarta-afine.png",
-            "descriere":"Tartă cu afine"
+            "cale_imagine": "poza6.png",
+            "titlu": "Amandina",
+            "descriere": "Amandina originala pe care o stim cu totii",
+            "sfert_ora": "3"
         },
         {
-            "fisier":"tort-trandafiri.png",
-            "descriere":"Tort special"
+            "cale_imagine": "poza7.png",
+            "titlu": "Rulou fructe",
+            "descriere": "Rulou racoros de vara cu fructe, frisca si vanilie",
+            "sfert_ora": "3"
+        },
+        {
+            "cale_imagine": "poza8.png",
+            "titlu": "Mini amandine",
+            "descriere": "Amandine, in versiunea mini, pentru cei ce tin cura",
+            "sfert_ora": "4"
+        },
+        {
+            "cale_imagine": "poza9.png",
+            "titlu": "Ecler",
+            "descriere": "Ecler cu fistic, ciocolata, sau vanilie",
+            "sfert_ora": "4"
+        },
+        {
+            "cale_imagine": "poza10.png",
+            "titlu": "Indiana",
+            "descriere": "Un fel de sandwich glazurat cu ciocolata, in mijloc avand frisca",
+            "sfert_ora": "4"
         }
     ]
 }

@@ -1,0 +1,28 @@
+/* Background fix la scroll */
+
+#main {
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#imag {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 1500px;
+    height: 1500px;
+    background-position: center;
+    animation-name: animatie_background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animatie_background {
+    0%, 100% {
+        background-image: url('/resurse/imagini/galerie/briose.png');
+    }
+
+    50% {
+        background-image: url('/resurse/imagini/galerie/tort.png');
+    }
+}

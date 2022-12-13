@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="ro">
+
+<head>
+    
+    <title>Voipan</title> 
+    
+    <meta name="keywords" content="brutarie, panificatie, patiserie, cofetarie">
+    <meta name="description" 
+    content="De 15 ani de cand suntem pe piata romaneasca avem o permanenta preocupare pentru sanatatea clientilor nostri care ne-a determinat 
+    sa facem o selectie riguroasa a retetelor folosite si a oamenilor cu care lucram, respectand in acelasi timp si normele europene in domeniul alimentatiei">
+    <meta name="msapplication-TileColor" content="#C4A484">
+    
+    <link rel="stylesheet" href="resurse/css/galerie_statica.scss" type="text/css" />
+    <%- include("../fragmente/head.ejs") %>
+
+</head>
+
+<body>
+    
+    <%- include("../fragmente/header.ejs") %>
+    <main>
+
+        <div id="a-noua-zona">
+            <section id="galerie">
+                        <h2> Galerie </h2>
+
+                </div>
+                <div id="grid-galerie">
+                    <% for (let imag of locals.imagini){ %>
+                        <%
+                        var date=new Date (); 
+                        var sfert=date.getMinutes(); 
+                        var timp="0"; %>
+                       <% if (sfert < 15){ %>
+                          <%  timp=1; %>
+                      <%  }else if(sfert >= 15 && sfert < 30){  %>
+                        <%timp=2; %>
+                        <% }else if(sfert >= 30 && sfert < 45){ %>
+                            <% timp=3;  %>
+                            <% } else { timp=4; } %>
+                            <% if(imag.sfert_ora && imag.sfert_ora.includes(timp)){ %>
+                                <figure>
+                                    <picture>
+                                        <source srcset="<%- imag.fisier_mediu %>" media="(max-width: 800px)" />
+                                        <!-- <source srcset="<%- imag.fisier_mic %>" media="(max-width: 450px)" /> -->
+                                        <img src="<%- imag.fisier %>" title="<%- imag.descriere %>" alt="<% if (imag.alt){ %> <%- imag.alt %> <% }else{ %> <%- imag.titlu %> <%} %>" /> 
+                                    </picture>
+                                    <figcaption>
+                                        <%- imag.descriere %>
+                                    </figcaption>
+                                </figure>
+                                <% } %>
+                            <% } %>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    
+    <%- include("../fragmente/footer.ejs") %>
+
+</body>
+
+</html>

@@ -1,8 +1,8 @@
 body{
     --inaltime-meniu: 2.5rem;
     --latime-buton:100px;
-    --culoare-meniu: #DB7629;
-    --culoare-meniu-selectat: #E8AF20;
+    --culoare-meniu: var(--rosu);
+    --culoare-meniu-selectat: var(--crem);
     --latime-bord-meniu:1px;
 }
 
@@ -19,7 +19,7 @@ ul.meniu{
 ul.meniu li a {
     height:100%;
     font-weight: 600;
-    color: white;
+    color: black;
 
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ ul.meniu>li {
     overflow:hidden;
     line-height: var(--inaltime-meniu);
     vertical-align: middle;
-    border:var(--latime-bord-meniu) solid #F25922;
+    border:var(--latime-bord-meniu) solid var(--crem);
     width:var(--latime-buton);
     text-align: center;
 }
@@ -65,7 +65,7 @@ ul.meniu li:hover ul{
 
 ul.meniu ul li{
     height: var(--inaltime-meniu);
-    border:var(--latime-bord-meniu) solid #F25922;
+    border:var(--latime-bord-meniu) solid var(--verde);
     width:var(--latime-buton);
 }
 

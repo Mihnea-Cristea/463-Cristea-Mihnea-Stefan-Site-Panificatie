@@ -1,5 +1,5 @@
-E8AF20 - Galben ocru
-8C5C14 - Maro
-DB7629 - Caramiziu
-F25922 - Portocaliu
-EB3C2A - Rosu mat
+--quartz: #EDD0C0;
+--verde: #B3C0AE;
+--portocaliu: #FEC47F;
+--rosu: #C8626D;
+--crem: #BC8880;

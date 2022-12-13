@@ -15,20 +15,20 @@ obGlobal = {
 
 function createImages() {
     var continutFisier = fs.readFileSync(__dirname + "/resurse/json/galerie.json").toString("utf8");
-    //console.log(continutFisier);
+
     var obiect = JSON.parse(continutFisier);
     var dim_mediu = 200
     var dim_mic = 100
     obGlobal.imagini = obiect.imagini;
-    obGlobal.imagini.forEach(function (elem) {
-        [numefisier, extensie] = elem.fisier.split('.');
-        if (!fs.existsSync(obiect.cale_galerie + '/mediu/')) {
-            fs.mkdirSync(obiect.cale_galerie + '/mediu/');
-        }
-        elem.fisier_mediu = obiect.cale_galerie + '/mediu/' + numefisier + '.webp';
-        elem.fisier = obiect.cale_galerie + "/" + elem.fisier;
-        sharp(__dirname + '/' + elem.fisier).resize(dim_mediu).toFile(__dirname + '/' + elem.fisier_mediu);
-    })
+    // obGlobal.imagini.forEach(function (elem) {
+    //     [numefisier, extensie] = elem.fisier.split('.');
+    //     if (!fs.existsSync(obiect.cale_galerie + '/mediu/')) {
+    //         fs.mkdirSync(obiect.cale_galerie + '/mediu/');
+    //     }
+    //     elem.fisier_mediu = obiect.cale_galerie + '/mediu/' + numefisier + '.webp';
+    //     elem.fisier = obiect.cale_galerie + "/" + elem.fisier;
+    //     sharp(__dirname + '/' + elem.fisier).resize(dim_mediu).toFile(__dirname + '/' + elem.fisier_mediu);
+    // })
     //console.log(obGlobal.imagini);
 }
 

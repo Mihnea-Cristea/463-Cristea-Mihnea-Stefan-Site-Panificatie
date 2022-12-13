@@ -1,0 +1,92 @@
+#a-noua-zona{
+  padding-left:1 em;
+  padding-right:1 em;
+} 
+
+#grid-galerie {
+    // margin-top: 3%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap:0.5em;
+    grid-column-gap:0.5em;
+    counter-reset: nrimag 0;
+
+    img{
+        width: 100%; 
+    }
+
+    figcaption::before{
+        content: counter(nrimag, upper-roman) ")";
+      }
+
+    figcaption{
+        text-align:center;
+        counter-increment: nrimag 1;
+    }
+    $img: -1;
+    @for $imagine from 1 through 10{
+        @if($imagine <= 3){
+            > figure:nth-child(#{$imagine}){
+                $col_sus: $img + 2;
+                $col_jos: $img + 3;
+                grid-area: 1/#{$col_sus}/2/#{$col_jos};
+        }
+        $img: $img + 1;
+    }@else if($imagine < 6){
+        > figure:nth-child(#{$imagine}){ 
+            $col_sus: $img - 1;
+            $col_jos: $img;
+            grid-area: 2/#{$col_sus}/3/#{$col_jos};
+        }
+        $img: $img + 2
+    }@else if($imagine < 8){
+            > figure:nth-child(#{$imagine}){
+                $col_sus: $img - 5;
+                $col_jos: $img - 4;
+                grid-area:  3/#{$col_sus}/4/#{$col_jos};
+            }
+            $img: $img + 2
+    }@else if($imagine <= 10){
+        > figure:nth-child(#{$imagine}){
+            $col_sus: $img - 9;
+            $col_jos: $img - 8;
+            grid-area:  4/#{$col_sus}/5/#{$col_jos};
+    }
+    $img: $img + 1
+    }
+}
+}
+
+@media screen and (max-width:700px) {
+    #grid-galerie {
+        display:grid;
+        grid-template-columns: repeat(2,fr);
+        $k: 1;
+        $nr: 0;
+        $img: 1;
+        @for $imagine from 1 through 10{
+            > figure:nth-child(#{$imagine}){
+                $linie_sus: $k;
+                $linie_jos: $k + 1;
+                $col_sus: $img;
+                $col_jos: $img + 1;
+                grid-area: #{$linie_sus}/#{$col_sus}/#{$linie_jos}/#{$col_jos};
+                $nr: $nr + 1;
+                $img: $img + 1;
+            }
+            @if($nr == 2){
+                $k: $k + 1;
+                $nr: 0;
+                $img: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    #grid-galerie {
+        display: block;
+    }
+  }
+
+/* sass ./resurse/scss/galerie_statica.scss resurse/css/galerie_statica.css */
