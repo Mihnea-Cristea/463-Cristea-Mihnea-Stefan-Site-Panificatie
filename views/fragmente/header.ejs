@@ -1,8 +1,8 @@
-<header class="c1" id="h1">
-    <h1>Cofetarie, Brutarie, Patiserie</h1>
+<header>
 
     <div id="Titlu-Hover">
         <div id="text">
+            <p> </p>
             <h2>Voipan</h2>
         </div>
 
@@ -47,14 +47,12 @@
             </li>
 
             <li class="meniu-categorie">
-                <a>Produse</a>
-                <ul class="submeniu">
-                    <li class="submeniu-categorie"><a href="http://www.google.com">Toate</a></li>
-                    <li class="submeniu-categorie"><a href="#">Prajituri</a></li>
-                    <li class="submeniu-categorie"><a href="#">Torturi</a></li>
-                    <li class="submeniu-categorie"><a href="#">Patiserie</a></li>
-                </ul>
-
+                <a href="/produse">Produse</a>
+                    <ul>
+                        <% for(let opt of locals.optiuni) {  %> 
+                            <%  var cat1 = opt.unnest  %>
+                            <li><a href="/produse?tip=<%-cat1%>"><%-cat1 %></a></li>
+                    </ul>
             </li>
 
             <li class="meniu-categorie undroppable"><a href="/galerie">Galerie</a></li>
